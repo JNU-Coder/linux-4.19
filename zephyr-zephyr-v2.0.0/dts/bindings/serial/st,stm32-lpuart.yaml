@@ -1,0 +1,25 @@
+title: STM32 LPUART
+
+description: >
+    This binding gives a base representation of the STM32 LPUART
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "st,stm32-lpuart"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    clocks:
+      category: required
+
+    hw-flow-control:
+      type: boolean
+      category: optional
+      description: Set to enable RTS/CTS flow control at boot time

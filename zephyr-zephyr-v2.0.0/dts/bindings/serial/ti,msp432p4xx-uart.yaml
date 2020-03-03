@@ -1,0 +1,17 @@
+title: TI MSP432P4XX UART
+
+description: >
+    This binding gives a base representation of the TI MSP432P4XX UART
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "ti,msp432p4xx-uart"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required

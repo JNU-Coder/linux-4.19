@@ -1,0 +1,14 @@
+title: Altera JTAG UART
+
+description: >
+    This binding gives a base representation of the Altera Jtag UART
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "altera,jtag-uart"
+
+    reg:
+      category: required

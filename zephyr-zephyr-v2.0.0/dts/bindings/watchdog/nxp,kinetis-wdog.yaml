@@ -1,0 +1,29 @@
+#
+# Copyright (c) 2018, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: NXP Kinetis watchdog driver
+
+description: >
+    This is a representation of the Kinetis watchdog
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "nxp,kinetis-wdog"
+
+    reg:
+      category: required
+
+    label:
+      category: required
+
+    interrupts:
+      category: required
+
+    clocks:
+      category: required

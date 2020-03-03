@@ -1,0 +1,37 @@
+title: Atmel SAM0 SERCOM UART driver
+
+description: >
+    This binding gives a base representation of the Atmel SAM0 SERCOM UART driver
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "atmel,sam0-uart"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    rxpo:
+      type: int
+      category: required
+      description: Receive Data Pinout
+
+    txpo:
+      type: int
+      category: required
+      description: Transmit Data Pinout
+
+    rxdma:
+      type: int
+      category: optional
+      description: Receive DMA channel
+
+    txdma:
+      type: int
+      category: optional
+      description: Transmit DMA channel

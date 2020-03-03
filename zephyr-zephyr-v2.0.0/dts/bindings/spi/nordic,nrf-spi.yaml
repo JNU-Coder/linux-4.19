@@ -1,0 +1,38 @@
+#
+# Copyright (c) 2018 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: Nordic nRF Family SPI Master node
+
+description: >
+    This is a representation of the Nordic nRF SPI node
+
+inherits:
+    !include spi.yaml
+
+properties:
+    compatible:
+      constraint: "nordic,nrf-spi"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    sck-pin:
+      type: int
+      category: required
+      description: SCK pin
+
+    mosi-pin:
+      type: int
+      category: required
+      description: MOSI pin
+
+    miso-pin:
+      type: int
+      category: required
+      description: MISO pin

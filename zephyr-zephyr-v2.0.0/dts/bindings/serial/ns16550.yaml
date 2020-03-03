@@ -1,0 +1,34 @@
+title: ns16550
+
+description: >
+    This binding gives a base representation of the ns16550 UART
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "ns16550"
+
+    reg:
+      category: required
+
+    reg-shift:
+      type: int
+      category: optional
+      description: quantity to shift the register offsets by
+
+    pcp:
+      type: int
+      category: optional
+      description: custom clock (PRV_CLOCK_PARAMS, if supported)
+
+    dlf:
+      type: int
+      category: optional
+      description: divisor latch fraction (DLF, if supported)
+
+    pcie:
+      type: boolean
+      category: optional
+      description: attached via PCI(e) bus

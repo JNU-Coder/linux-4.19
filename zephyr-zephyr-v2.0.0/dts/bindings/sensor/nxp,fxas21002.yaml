@@ -1,0 +1,25 @@
+#
+# Copyright (c) 2018, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: FXAS21002 3-axis gyroscope
+
+description: >
+    This is a representation of the FXAS21002 3-axis gyroscope sensor
+
+inherits:
+    !include i2c-device.yaml
+
+properties:
+    compatible:
+      constraint: "nxp,fxas21002"
+
+    int1-gpios:
+      type: compound
+      category: optional
+
+    int2-gpios:
+      type: compound
+      category: optional

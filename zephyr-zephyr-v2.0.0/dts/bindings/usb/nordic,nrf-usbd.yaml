@@ -1,0 +1,33 @@
+#
+# Copyright (c) 2018, Sundar Subramaniyan <sundar.subramaniyan@gmail.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: Nordic nRF52 USBD
+
+description: >
+    This binding gives a base representation of the Nordic nRF52 USB device controller
+
+inherits:
+    !include usb-ep.yaml
+
+properties:
+    compatible:
+      constraint: "nordic,nrf-usbd"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    num-isoin-endpoints:
+      type: int
+      category: required
+      description: Number of ISOIN endpoints supported by hardware
+
+    num-isoout-endpoints:
+      type: int
+      category: required
+      description: Number of ISOOUT endpoints supported by hardware

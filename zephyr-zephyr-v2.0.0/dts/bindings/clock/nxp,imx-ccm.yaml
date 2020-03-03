@@ -1,0 +1,31 @@
+#
+# Copyright (c) 2017, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: i.MX Clock Controller Module (CCM)
+
+description: >
+    This is a representation of the i.MX CCM IP node
+
+inherits:
+    !include [clock.yaml, base.yaml]
+
+properties:
+    compatible:
+      constraint: "nxp,imx-ccm"
+
+    reg:
+      category: required
+
+    label:
+      category: required
+
+    "#clock-cells":
+      description: should be 3.
+
+"#cells":
+  - name
+  - offset
+  - bits

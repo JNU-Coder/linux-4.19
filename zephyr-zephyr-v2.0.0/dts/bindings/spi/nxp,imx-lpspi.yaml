@@ -1,0 +1,26 @@
+#
+# Copyright (c) 2018, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: NXP LPSPI
+
+description: >
+    This binding gives a base representation of the NXP i.MX LPSPI controller
+
+inherits:
+    !include spi.yaml
+
+properties:
+    compatible:
+      constraint: "nxp,imx-lpspi"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    clocks:
+      category: required

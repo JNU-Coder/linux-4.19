@@ -1,0 +1,22 @@
+title: Atmel SAM Family AFEC
+
+description: >
+    This binding gives a base representation of the Atmel SAM AFEC
+
+inherits:
+    !include adc.yaml
+
+properties:
+    compatible:
+      constraint: "atmel,sam-afec"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    peripheral-id:
+      type: int
+      description: peripheral ID
+      category: required

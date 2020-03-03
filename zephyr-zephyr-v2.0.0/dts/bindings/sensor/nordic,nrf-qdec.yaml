@@ -1,0 +1,56 @@
+#
+# Copyright (c) 2018, Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+title: Nordic nRF Family QDEC node
+
+description: >
+    This is a representation of the Nordic nRF QDEC node
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "nordic,nrf-qdec"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    a-pin:
+      type: int
+      description: A pin
+      category: required
+
+    b-pin:
+      type: int
+      description: B pin
+      category: required
+
+    led-pin:
+      type: int
+      description: LED pin for light based QDEC device
+      category: optional
+
+    enable-pin:
+      type: int
+      description: Enables connected QDEC device
+      category: optional
+
+    led-pre:
+      type: int
+      description: Time LED is enabled prior to sampling event (in us)
+      category: required
+
+    steps:
+      type: int
+      description: Number of steps on the rotating wheel
+      category: required
+
+    label:
+      category: required

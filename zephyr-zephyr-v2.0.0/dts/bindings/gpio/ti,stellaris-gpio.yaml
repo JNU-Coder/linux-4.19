@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: Apache-2.0
+title: TI Stellaris GPIO
+
+description: >
+    This is a representation of the TI Stellaris GPIO node
+
+inherits:
+    !include [gpio-controller.yaml, base.yaml]
+
+properties:
+    compatible:
+      constraint: "ti,stellaris-gpio"
+
+    reg:
+      category: required
+
+    label:
+      category: required
+
+    interrupts:
+      category: required
+
+"#cells":
+  - pin
+  - flags
